@@ -10,7 +10,7 @@
 	"workspaceFolder": "/usr/local/src",
 
 	"mounts": [
-        "source=${localEnv:HOME}/.ssh,target=/home/agile/.ssh,type=bind,consistency=cached",
+        "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached",
     ],
 	"remoteUser": "vscode",
 
