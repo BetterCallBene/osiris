@@ -1,7 +1,22 @@
 # osiris
 
-# compile and run
+## compile and run
+
+### build server
 
 ```bash
-go run cmd/main.go
+go run cmd/server/main.go
+```
+
+### build compiler
+
+```bash
+go run cmd/compiler/main.go
+```
+
+### build client
+
+```bash
+cd cmd/client
+GOOS=js GOARCH=wasm go build -o demo.wasm
 ```
