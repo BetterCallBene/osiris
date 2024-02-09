@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"os"
-	"time"
 
 	"github.com/BetterCallBene/osiris/internal/signal"
 	"github.com/pion/webrtc/v4"
@@ -62,16 +61,16 @@ func startup() {
 		d.OnOpen(func() {
 			fmt.Printf("Data channel '%s'-'%d' open. Random messages will now be sent to any connected DataChannels every 5 seconds\n", d.Label(), d.ID())
 
-			for range time.NewTicker(5 * time.Second).C {
-				message := "Hello world"
-				fmt.Printf("Sending '%s'\n", message)
+			// for range time.NewTicker(5 * time.Second).C {
+			// 	message := "Hello world"
+			// 	fmt.Printf("Sending '%s'\n", message)
 
-				// Send the message as text
-				sendErr := d.SendText(message)
-				if sendErr != nil {
-					panic(sendErr)
-				}
-			}
+			// 	// Send the message as text
+			// 	sendErr := d.SendText(message)
+			// 	if sendErr != nil {
+			// 		panic(sendErr)
+			// 	}
+			// }
 		})
 
 		// Register text message handling
