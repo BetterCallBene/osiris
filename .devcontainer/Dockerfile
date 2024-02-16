@@ -49,6 +49,5 @@ RUN groupadd --gid $USER_GID $USERNAME \
 
 # [Optional] Set the default user. Omit if you want to keep the default as root.
 USER $USERNAME
-RUN sudo chown -R $USERNAME:$USERNAME /go
 RUN sudo usermod -a -G docker $USERNAME
 WORKDIR /usr/local/src
